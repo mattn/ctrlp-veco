@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export VECO_FILE=`mktemp /tmp/tmp.XXXXXX`
+vim -c Veco -
+[ $? != 0 ] && exit $?
+cat $VECO_FILE
+rm $VECO_FILE
